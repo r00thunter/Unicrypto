@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TREZOR Login Test</title>
+    <script>
+
+     function trezorLogin(response) {
+         document.getElementById("response").innerHTML = JSON.stringify(response, undefined, 2);
+         console.log(response);
+     }
+
+    </script>
+  </head>
+  <body>
+
+    <trezor:login callback="trezorLogin" text="Pair with TREZOR">
+    </trezor:login>
+
+    <pre id="response"></pre>
+
+    <script src="../connect.js"></script>
+
+    <!--custom font, from Google Fonts-->
+    <link href='https://fonts.googleapis.com/css?family=Courgette' rel='stylesheet'>
+
+    <!--custom style of the Trezor connect-->
+    <style>
+     #trezorconnect-wrapper {
+         font-family: 'Courgette', cursive;
+     }
+     #trezorconnect-button {
+         background-color: #ED69BE;
+         font-size: 20px;
+         border-radius: 10px;
+     }
+     #trezorconnect-button:hover {
+         background-color: #A12977;
+     }
+     #trezorconnect-infolink {
+         color: #ED69BE;
+         font-size: 13px;
+     }
+     #trezorconnect-infolink:hover {
+         color: #A12977;
+     }
+    </style>
+
+  </body>
+</html>

@@ -1,0 +1,572 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 20px;
+ 	background: linear-gradient(0deg, #ffffff, #fcfcfc) no-repeat;
+	color: #333333;
+	font: 400 18px/1.4 Roboto, Helvetica, Arial, sans-serif;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+
+a {
+    color: #000000;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #777777;
+}
+
+button {
+    padding: 8px 12px;
+    font-size: 18px;
+    background: transparent;
+    border: 1px solid #777777;
+    border-radius: 5px;
+	color: #555555;
+	cursor: pointer;
+    transition: background 0.5s, color 0.5s, border 0.5s, opacity 0.5s;
+}
+
+button:hover {
+    color: #000000;
+	border-color: #000000;
+}
+
+button:active,
+button.active {
+	color: #ffffff;
+	background: #666666; /* same as border */
+    transition: none;
+}
+
+button:focus {
+	outline: 0;
+}
+
+button[disabled] {
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 6px;
+    border: 0;
+    border-bottom: 1px solid #bbbbbb;
+    background: transparent;
+    font-size: 18px;
+    outline: 0;
+}
+
+.smallcaps {
+    font-size: 85%;
+}
+
+.fade {
+    /* animation: fade 2.0s infinite ease-in-out; */
+}
+
+@keyframes fade {
+    0% { opacity: 1; }
+    50% { opacity: 0.2; }
+    100% { opacity: 1; }
+}
+
+#header {
+    overflow: hidden; /* children float */
+}
+
+#logo {
+    float: left;
+    width: 126px;
+	height: 35px;
+}
+
+#header_right {
+    float: right;
+    overflow: hidden; /* children float */
+}
+
+#header_icon {
+	float: left;
+	height: 48px;
+    margin-right: 10px;
+}
+
+#operation {
+    float: left;
+}
+
+#origin {
+	font-size: 14px;
+	opacity: 0.8;
+}
+
+/*
+ * alerts
+ */
+
+.alert {
+    position: absolute;
+    left: 20px;                 /* same as padding */
+    right: 20px;                /* same as padding */
+    margin-top: 150px;
+    text-align: center;
+
+    /* opacity: 1; */
+    visibility: visible;
+    /* transition: visibility 0s, opacity 0.3s cubic-bezier(0.755, 0.05, 0.855, 0.06); */
+}
+
+.alert.fadeout {
+    /* opacity: 0; */
+    visibility: hidden;
+    /* transition: visibility 0s 0.3s, opacity 0.3s cubic-bezier(0.755, 0.05, 0.855, 0.06); */
+}
+
+.alert_icon {
+    width: 90px;
+    height: 90px;
+    padding: 1px;               /* whitespace between border and image */
+    vertical-align: middle;     /* center-to-center with heading */
+    border: 1px solid #333333;	/* same as text color */
+    border-radius: 50%;         /* make icon round */
+}
+
+.alert_heading {
+    font-size: 32px;
+    font-weight: 100;
+	line-height: 1.3;
+}
+
+.alert_icon + .alert_heading {
+    display: inline-block;      /* inline with icon */
+    max-width: 250px;
+    margin-left: 20px;          /* set off from icon */
+    vertical-align: middle;     /* center-to-center with icon */
+    text-align: left;
+}
+
+.alert_heading strong {
+    font-weight: 400;
+}
+
+#alert_connect {
+    margin-top: 120px;
+}
+
+
+
+#alert_fees .alert_heading {
+    margin-bottom: 10px;
+}
+
+#alert_fees .change-account {
+    position: absolute;
+    font-size: 14px;
+    top: 10px;
+    left: 0px;
+    cursor: pointer;
+    color: #555555;
+    transition: color 0.5s;
+}
+
+#alert_fees .change-account span {
+    display: inline-block;
+    padding-top: 1px;
+    padding-bottom: 2px;
+    transition: border 0.5s;
+    border-bottom: 1px solid #FFFFFF;
+}
+
+#alert_fees .change-account:hover span {
+    color: #000000;
+    border-bottom: 1px solid #000000;
+}
+
+#alert_fees .change-account:before {
+    content: '\2190';
+    display: inline-block;
+    padding-right: 2px;
+    vertical-align: top;
+}
+
+.fee button {
+    width: 250px;
+    margin-bottom: -1px;
+    border-radius: 0;
+    position: relative;
+    height: 50px;
+}
+
+.fee:first-child button {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.fee:last-child button {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.fee-name {
+    position: absolute;
+    text-transform: capitalize;
+    top: 15px;
+    left: 14px;
+}
+
+.fee-name-normal {
+    position: absolute;
+    text-transform: capitalize;
+    top: 9px;
+    left: 14px;
+}
+
+.fee-name-subtitle {
+    position: absolute;
+    top: 26px;
+    left: 14px;
+    font-size: 12px;
+    opacity: 0.9;
+}
+
+.fee-size,
+.fee-minutes,
+.fee-insufficient-funds {
+    font-size: 13px;
+    opacity: 0.8;
+    position: absolute;
+    right: 10px;
+}
+
+.fee-size {
+    top: 8px;
+}
+
+.fee-minutes {
+    top: 24px;
+}
+
+.fee-insufficient-funds {
+    top: 18px;
+}
+
+.fee button.opened {
+    border-bottom: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.fee-custom-opener.untouched:after {
+    content: '\2303';
+    position: absolute;
+    top: 13px;
+    right: 10px;
+    transform: rotate(180deg) translateY(2px);
+}
+
+.fee-custom {
+    width: 250px;
+    margin: 0px auto;
+    border: 1px solid #777777;
+    text-align: left;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 10px 6px;
+    padding-top: 0px;
+    border-top: 0px;
+    margin-bottom: 10px;
+}
+
+.fee-custom.hidden {
+    display: none;
+}
+
+.fee-custom input {
+    width: 80px;
+    outline: none;
+    padding-left: 0px;
+}
+
+.fee-custom .fee-custom-wrapper {
+    display: flex;
+    padding-left: 10px;
+    padding-right: 5px;
+}
+
+.fee-custom .fee-custom-label {
+    flex: 1;
+    padding: 9px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1;
+    color: #424242;
+    text-align: left;
+    align-self: flex-end;
+}
+
+.fee-custom .fee-custom-button {
+    text-align: center;
+    vertical-align: middle;
+    width: 70px;
+    height: 34px;
+    padding: 0px;
+    border-radius: 5px;
+}
+
+.fee-custom button[disabled] {
+    background: #777777;
+    color: #FFFFFF;
+    opacity: 0.2;
+}
+
+.fee-custom .fee-custom-warning {
+    display: block;
+    font-size: 14px;
+    padding: 14px 10px;
+    padding-bottom: 0px;
+}
+
+.fee-custom .fee-custom-warning strong {
+    display: block;
+}
+
+
+
+#alert_accounts, 
+#alert_fees {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#alert_accountinfo,
+#alert_nemaddress,
+#alert_xpubkey {
+    margin-top: 110px;
+}
+
+
+
+/* #alert_accounts.loading #accounts,
+#alert_accounts.loading #accounts-legacy {
+    pointer-events: none;
+} */
+
+#alert_accounts .alert_heading {
+    margin: 0px;
+}
+
+#alert_accounts .alert_heading strong {
+    font-weight: 300;
+}
+
+#alert_accounts.no-segwit .alert_heading {
+    margin-bottom: 10px;
+}
+
+#alert_accounts.no-segwit .accounts_tab {
+    display: none;
+}
+
+#accounts-legacy {
+    display: none;
+}
+
+.accounts_tab {
+    padding-bottom: 14px;
+    width: 250px;
+    margin: 0px auto;
+}
+
+.accounts_tab div {
+    float: left;
+    cursor: pointer;
+}
+
+.accounts_tab div.accounts_legacy_tab {
+    float: right;
+}
+
+.accounts_tab div.accounts_tab_active {
+    border-bottom: 3px solid #4cc148;
+}
+
+.accounts_tab:after {
+    content: "\00a0";
+    clear: both;
+}
+
+.account button
+{
+    width: 250px;
+    margin-bottom: -1px;
+    border-radius: 0;
+}
+
+.account:first-child button
+{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.account:last-child button {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.account-status {
+    display: block;
+	font-size: 14px;
+	opacity: 0.8;
+}
+
+/*
+ * passphrase
+ */
+
+#passphrase_dialog {
+    margin-top: 70px;
+}
+
+#passphrase_header {
+    font-size: 24px;
+    font-weight: 100;
+}
+
+#passphrase_subheader,
+#passphrase_show_label {
+	font-size: 14px;
+    opacity: 0.8;
+}
+
+#passphrase_show_row {
+	text-align: center;
+}
+
+#passphrase_input_row,
+#passphrase_enter {
+    margin-top: 10px;
+}
+
+#passphrase_show_row {
+    margin-top: 5px;
+}
+
+#passphrase_input_row input,
+#passphrase_enter button {
+    width: 250px;
+}
+
+#passphrase_dialog .warning {
+    color: #fa3e3e;
+    font-size: 14px;
+    margin-top: 5px;
+    display: none;
+}
+#passphrase_dialog.not-valid .warning {
+    display: block;
+}
+
+#passphrase_dialog.not-valid button {
+    border-color: #c5c5c5;
+    color: #c5c5c5;
+    pointer-events: none;
+}
+
+/*
+ * pin
+ */
+
+#pin_dialog {
+    margin-top: 30px;
+}
+
+#pin_header {
+    font-size: 24px;
+    font-weight: 100;
+}
+
+#pin_subheader {
+	font-size: 14px;
+    opacity: 0.8;
+}
+
+#pin_form {
+    display: inline-block; /* stick around content, align to center */
+}
+
+#pin_table,
+#pin_input_row,
+#pin_enter{
+	margin-top: 10px; /* vertical spacing */
+}
+
+#pin_table > div {
+    overflow: hidden; /* children float */
+}
+
+#pin_table button {
+    float: left;
+	width: 55px;
+	height: 55px;
+	margin-left: 10px;
+	margin-top: 10px;
+
+    color: #666666;
+    border: 1px solid #888888;
+    font-weight: 700;
+}
+
+#pin_table button:hover {
+    color: #000000;
+	border-color: #000000;
+}
+
+#pin_table button:active,
+#pin_table button.active {
+    color: transparent;
+    background: #888888;
+    border-color: #888888;
+}
+
+#pin_table > div > button:first-child {
+	margin-left: 0; /* cancel for the first column */
+}
+
+#pin_table button:focus {
+	outline: 0;
+}
+
+#pin_input_row {
+	position: relative; /* #pin_backspace has position: absolute */
+    text-align: left;
+}
+
+#pin_input_row input {
+    width: 185px; /* same as #pin_table width, % cause problems in firefox */
+    padding-left: 0;
+    padding-right: 0;
+	text-align: center;
+}
+
+#pin_backspace {
+    position: absolute;
+    right: 0;
+    top: 8px;
+    padding: 3px 3px 1px;
+    border: 0;
+    border-radius: 0;
+}
+
+#pin_enter button {
+	width: 100%;
+}

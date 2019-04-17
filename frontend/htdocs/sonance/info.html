@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <title></title>
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="canonical" href="">
+    <meta name="theme-color" content="#310f72">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css">
+    <!-- Color Switch -->
+    <link rel="stylesheet" href="css/jquery.colorpanel.css">
+    <!-- Default Style CSS -->
+    <link rel="stylesheet" type="text/css" href="css/default.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <!-- Color Skin -->
+    <link rel="stylesheet" type="text/css" id="cpswitch" href="css/skins/default.css">
+    <!-- Global site tag (gtag.js) - AdWords: 1045328140 --> <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1045328140"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-1045328140'); </script>
+</head>
+
+<body id="wrapper">
+    <div id="colorPanel" class="colorPanel">
+        <a id="cpToggle" href="#"></a>
+        <ul></ul>
+    </div>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="index.html"><img class="logo" src="img/logo.png" alt=""></a>
+            <div class="collapse navbar-collapse justify-content-md-center" id="navbarToggler">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="img/icons/exchange-icon.png"><span class="name">Exchange</span></a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="trade.html">
+                                Basic
+                            </a>
+                            <a class="dropdown-item" href="advanced.html">
+                                Advanced
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href=""><img src="img/icons/lab-icon.png"><span class="name">Labs</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href=""><img src="img/icons/rocket-icon.png"><span class="name">LaunchPad</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link last" href="info.html"><img src="img/icons/info-icon.png"><span class="name">Info</span></a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Join Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Support</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="register.html">Register</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">English</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="">
+                                Deutsch
+                            </a>
+                            <a class="dropdown-item" href="">
+                                Francais
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link language-btn" href=""><img src="img/icons/translate-icon.png"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header>
+        <div class="banner row">
+            <div class="container content">
+                <h1>Sonance Info</h1>
+            </div>
+        </div>
+    </header>
+    <div class="page-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <br>
+                    <br>
+                    <div class="form-group currency-select col-md-4 col-sm-4 col-xs-12">
+                        <select class="form-control">
+                            <option>USD</option>
+                            <option>CNY</option>
+                        </select>
+                    </div>
+                    <div class="info-table-outer">
+                        <table id="info-data-table " class="table row-border info-data-table table-hover " cellspacing="0 " width="100% ">
+                            <thead>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>Name</th>
+                                    <th>Price</th>
+                                    <th>Market Cap</th>
+                                    <th>24h Volume</th>
+                                    <th>Circulating Supply</th>
+                                    <th>24h Change</th>
+                                    <th>Max Supply</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="clickable-row " data-href="">
+                                    <td>1</td>
+                                    <td><img src="img/coins/btc-coin.png">BTC<span class="name">(Bitcoin)</span></td>
+                                    <td>11339.99</td>
+                                    <td>190,942,184,620</td>
+                                    <td>493,239,746</td>
+                                    <td>16,837,950 BTC</td>
+                                    <td><span class="green-color">3.95%</span></td>
+                                    <td>21,000,000 BTC</td>
+                                </tr>
+                                <tr class="clickable-row " data-href="">
+                                    <td>2</td>
+                                    <td><img src="img/coins/eth-coin.png">ETH<span class="name ">(Ethereum)</span></td>
+                                    <td>932.40</td>
+                                    <td>90,851,213,578</td>
+                                    <td>84,469,090</td>
+                                    <td>97,438,024 ETH</td>
+                                    <td><span class="red-color ">-5.15%</span></td>
+                                    <td>97,438,024 ETH</td>
+                                </tr>
+                                <tr class="clickable-row " data-href="">
+                                    <td>3</td>
+                                    <td><img src="img/coins/bcc-coin.jpg">BCC<span class="name ">(Bitcoin Cash)</span></td>
+                                    <td>1494.86</td>
+                                    <td>25,360,020,361</td>
+                                    <td>9,691,025</td>
+                                    <td>16,964,813 BCC</td>
+                                    <td><span class="red-color ">-4.68%</span></td>
+                                    <td>21,000,000 BCC</td>
+                                </tr>
+                                <tr class="clickable-row " data-href="">
+                                    <td ">4</td>
+                                <td><img src="img/coins/ltc-coin.png ">LTC<span class="name ">(Litecoin)</span></td>
+                                <td>241.24</td>
+                                <td>13,298,839,410</td>
+                                <td>86,181,252</td>
+                                <td>55,127,008 LTC</td>
+                                <td><span class="green-color ">4.52%</span></td>
+                                <td>84,000,000 LTC</td>
+                            </tr>
+                            <tr class="clickable-row " data-href=" ">
+                                <td>5</td>
+                                <td><img src="img/coins/ada-coin.png ">ADA<span class="name ">(Cardano)</span></td>
+                                <td>0.37</td>
+                                <td>9,477,331,999</td>
+                                <td>11,079</td>
+                                <td>25,927,070,538 ADA</td>
+                                <td><span class="red-color ">-5.94%</span></td>
+                                <td>45,000,000,000 ADA</td>
+                            </tr>
+                            <tr class="clickable-row " data-href=" ">
+                                <td>6</td>
+                                <td "><img src="img/coins/neo-coin.png">NEO<span class="name ">(NEO)</span></td>
+                                    <td>134.93</td>
+                                    <td ">8,770,580,000</td>
+                                <td>36,122,129</td>
+                                <td>65,000,000 NEO</td>
+                                <td><span class="red-color ">-3.84%</span></td>
+                                <td ">100,000,000 NEO</td>
+                                </tr>
+                                <tr class="clickable-row " data-href="">
+                                    <td>7</td>
+                                    <td><img src="img/coins/eos-coin.png">EOS<span class="name ">(EOS)</span></td>
+                                    <td>9.40</td>
+                                    <td>6,100,723,462</td>
+                                    <td>14,749</td>
+                                    <td>649,239,180 EOS</td>
+                                    <td><span class="red-color ">-4.39%</span></td>
+                                    <td ">1,000,000,000 EOS</td>
+                            </tr>
+                            <tr class="clickable-row " data-href=" ">
+                                <td>8</td>
+                                <td "><img src="img/coins/iota-coin.png">IOTA<span class="name ">(MIOTA)</span></td>
+                                    <td>2.01</td>
+                                    <td>5,600,287,904</td>
+                                    <td>29,154</td>
+                                    <td>2,779,530,283 IOTA</td>
+                                    <td><span class="red-color ">-8.37%</span></td>
+                                    <td>2,779,530,283 IOTA</td>
+                                </tr>
+                                <tr class="clickable-row " data-href="">
+                                    <td ">9</td>
+                                <td><img src="img/coins/tron-icon.png ">TRX<span class="name ">(TRON)</span></td>
+                                <td>0.05</td>
+                                <td>1,984,893,120</td>
+                                <td>32,315</td>
+                                <td>40,000,000,000 TRX</td>
+                                <td><span class="red-color ">-8.77%</span></td>
+                                <td>100,000,000,000 TRX</td>
+                            </tr>
+                            <tr class="clickable-row " data-href=" ">
+                                <td>10</td>
+                                <td><img src="img/coins/omg-icon.png ">OMG<span class="name ">(OmiseGO)</span></td>
+                                <td>17.71</td>
+                                <td>1,806,983,878</td>
+                                <td>3,713</td>
+                                <td>102,042,552 OMG</td>
+                                <td><span class="red-color ">-4.82%</span></td>
+                                <td>140,245,398 OMG</td>
+                            </tr>
+                            <tr class="clickable-row " data-href=" ">
+                                <td>11</td>
+                                <td><img src="img/coins/bnb-coin.png ">BNB<span class="name ">(Sonance Coin)</span></td>
+                                <td>10.73</td>
+                                <td>1,428,954,470</td>
+                                <td>21,847,559</td>
+                                <td>133,192,382 BNB</td>
+                                <td><span class="red-color ">-7.06%</span></td>
+                                <td>197,192,382 BNB</td>
+                            </tr>
+                            <tr class="clickable-row " data-href=" ">
+                                <td>12</td>
+                                <td><img src="img/coins/verge-coin.png "><span class="name ">(Verge)</span></td>
+                                    <td>0.08</td>
+                                    <td>1,132,859,302</td>
+                                    <td>8,308</td>
+                                    <td>14,561,275,365 XVG</td>
+                                    <td><span class="red-color ">-5.77%</span></td>
+                                    <td>16,555,000,000 XVG</td>
+                            </tr>
+                            <tr class="clickable-row " data-href=" ">
+                                <td>13</td>
+                                <td><img src="img/coins/nano-coin.png ">NANO<span class="name ">(Nano)</span></td>
+                                <td>8.27</td>
+                                <td>1,101,890,810</td>
+                                <td>43,183</td>
+                                <td>133,248,289 NANO</td>
+                                <td><span class="red-color ">-11.14%</span></td>
+                                <td>133,248,289 NANO</td>
+                            </tr>
+                            <tr class="clickable-row " data-href=" ">
+                                <td>14</td>
+                                <td><img src="img/coins/steem-icon.png ">STEEM<span class="name ">(Steem)</span></td>
+                                    <td>4.11</td>
+                                    <td>1,023,488,994</td>
+                                    <td>5,756</td>
+                                    <td>248,797,154 STEEM</td>
+                                    <td><span class="red-color ">-6.02%</span></td>
+                                    <td>265,771,248 STEEM</td>
+                            </tr>
+                            <tr class="clickable-row " data-href=" ">
+                                <td>15</td>
+                                <td><img src="img/coins/walton-icon.png ">WTC<span class="name ">(Walton)</span></td>
+                                    <td>24.10</td>
+                                    <td>599,946,826</td>
+                                    <td>24,157</td>
+                                    <td>24,898,178 WTC</td>
+                                    <td><span class="red-color ">-9.22%</span></td>
+                                    <td>70,000,000 WTC</td>
+                            </tr>
+                            <tr class="clickable-row " data-href=" ">
+                                <td>16</td>
+                                <td><img src="img/coins/zrx-icon.png ">ZRX <span class="name ">(0x)</span></td>
+                                <td>1.15</td>
+                                <td>581,198,514</td>
+                                <td>1,613</td>
+                                <td>505,909,399 ZRX</td>
+                                <td><span class="red-color ">-8.01%</span></td>
+                                <td>1,000,000,000 ZRX</td>
+                            </tr>
+                            <tr class="clickable-row " data-href=" ">
+                                <td>17</td>
+                                <td><img src="img/coins/dgd-cion.png ">DGD<span class="name ">(DigixDAO)</span></td>
+                                    <td>281.21</td>
+                                    <td>562,423,680</td>
+                                    <td>3,758</td>
+                                    <td>2,000,000 DGD</td>
+                                    <td><span class="red-color ">-8.59%</span></td>
+                                    <td>2,000,000 DGD</td>
+                            </tr>
+                            <tr class="clickable-row " data-href=" ">
+                                <td>18</td>
+                                <td><img src="img/coins/hsr-coin.png ">HSR<span>(Hshare)</span></td>
+                                <td>12.30</td>
+                                <td>523,737,961</td>
+                                <td>2,589</td>
+                                <td>42,586,014 HSR</td>
+                                <td><span class="red-color ">-9.69%</span></td>
+                                <td>84,000,000 HSR</td>
+                            </tr>
+                            <tr class="clickable-row " data-href=" ">
+                                <td>19</td>
+                                <td><img src="img/coins/elf-coin.png ">ELF<span>(AELF)</span></td>
+                                <td>1.50</td>
+                                <td>421,184,847</td>
+                                <td>1,391</td>
+                                <td>280,000,000 ELF</td>
+                                <td><span class="red-color ">-6.42%</span></td>
+                                <td>1,000,000,000 ELF</td>
+                            </tr>
+                            <tr class="clickable-row " data-href=" ">
+                                <td>20</td>
+                                <td><img src="img/coins/bat-coin.png ">BAT<span>(Basic Attention Token )</span></td>
+                                <td>0.42</td>
+                                <td>417,659,256</td>
+                                <td>9,553</td>
+                                <td>1,000,000,000 BAT</td>
+                                <td><span class="red-color ">-7.21%</span></td>
+                                <td>1,500,000,000 BAT</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+   
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-links ">
+        <div class="container ">
+            <div class="row ">
+                <div class="col-md-12 ">
+                    <p><strong>Links:</strong></p>
+                    <p class="links ">
+                        <a href=" ">NEO</a>
+                        <a href=" ">Bitkan</a>
+                        <a href=" ">BTC123</a>
+                        <a href=" ">8BTC</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container ">
+            <div class="row ">
+                <div class="col-md-6 col-xs-12 links ">
+                    <ul>
+                        <li><a href=" ">About</a></li>
+                        <li><a href=" ">Terms</a></li>
+                        <li><a href=" ">Privacy</a></li>
+                        <li><a href=" ">Fees</a></li>
+                        <li><a href=" ">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-xs-12 social ">
+                    <ul>
+                        <li><a href=" "><i class=" "><i class="fab fa-facebook-f "></i></a></li>
+                        <li><a href=" "><i class="fab fa-twitter "></i></a></li>
+                        <li><a href=" "><i class="fab fa-reddit-alien "></i></li>
+                        <li><a href=" "><i class="fab fa-google-plus-g "></i></a></li>
+                        <li><a href=" "><i class="fab fa-medium-m "></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row copy-bar ">
+                <div class="col-md-6 col-xs-12 copy ">
+                    <p>&copy; 2017-2018 Sonance.com All Rights Reserved</p>
+                </div>
+                <div class="col-md-6 col-xs-12 statistics ">
+                    <p><span class="gray-color ">24h Volume：</span> 1,211,621.18 <span class="gray-color ">BNB/</span> 81,420.07 <span class="gray-color ">BTC/</span> 238,606.22 <span class="gray-color ">ETH/674,419,885.28 <span class="gray-color ">USDT</span> </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q " crossorigin="anonymous "></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js " integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl " crossorigin="anonymous "></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js "></script>
+    <script type="text/javascript " language="javascript " src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js ">
+    </script>
+    <script type="text/javascript " language="javascript " src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js ">
+    </script>
+    <!-- Color Switcher -->
+    <script type="text/javascript" src="js/jquery.colorpanel.js"></script>
+    <!-- Custom Scripts -->
+    <script type="text/javascript " src="js/script.js "></script>
+</body>
+<script type="text/javascript ">
+$(document).ready(function() {
+    $('.info-data-table').DataTable();
+});
+</script>
+<script type="text/javascript ">
+jQuery(document).ready(function($) {
+    $(".clickable-row ").click(function() {
+        window.location = $(this).data("href ");
+    });
+});
+</script>
+
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+    $('#colorPanel').ColorPanel({
+        styleSheet: '#cpswitch',
+        animateContainer: '#wrapper',
+        colors: {
+            '#2f3340': 'css/skins/default.css',
+            '#16a085': 'css/skins/seagreen.css',
+            '#000000': 'css/skins/black.css',
+            '#4b77be': 'css/skins/blue.css',
+            '#c0392c': 'css/skins/red.css',
+        }
+    });
+});
+</script>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TREZOR Get Ethereum XPUB Key Test</title>
+    <script>
+
+     function trezorGetXPubKey() {
+         var path = "m/44'/60'/0'"; 
+
+         // var path = [44 | 0x80000000,
+         //             60  | 0x80000000,
+         //             0  | 0x80000000 ,
+         //             0 ]; // same, in raw form
+
+         TrezorConnect.getXPubKey(path, function (response) {
+             if (response.success) {
+                 console.log('XPUB:', response.xpubkey); // serialized XPUB
+                 console.log('Raw path:', response.path);
+                 console.log('Serialized path:', response.serializedPath);
+                 console.log('Chaincode (hex):', response.chainCode);
+                 console.log('Public key (hex):', response.publicKey);
+             } else {
+                 console.error('Error:', response.error); // error message
+             }
+             document.getElementById("response").innerHTML = JSON.stringify(response, undefined, 2);
+         }, '1.4.0'); // 1.4.0 is first firmware that supports ethereum
+     }
+
+    </script>
+  </head>
+  <body>
+
+    <button onclick="trezorGetXPubKey()">Get XPUB key</button>
+
+    <pre id="response"></pre>
+
+    <script src="../connect.js"></script>
+
+  </body>
+</html>

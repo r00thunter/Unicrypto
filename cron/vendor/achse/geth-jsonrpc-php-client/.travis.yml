@@ -1,0 +1,17 @@
+language: php
+
+php:
+  - 5.6
+  - 7.1
+  - 7.2
+
+before_script:
+  - composer self-update || echo "[ERROR] update-composer failed!"
+  - composer install --no-interaction --optimize-autoloader
+
+script:
+  - ./vendor/bin/tester -s -j 32 -c ./tests/php.ini ./tests/Unit --coverage coverage.xml --coverage-src src
+
+after_success:
+  - wget https://github.com/satooshi/php-coveralls/releases/download/v1.0.1/coveralls.phar
+  - php coveralls.phar --verbose --config tests/.coveralls.yml

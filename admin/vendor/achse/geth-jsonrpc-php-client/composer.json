@@ -1,0 +1,23 @@
+{
+	"name": "achse/geth-jsonrpc-php-client",
+	"description": "API client lib for communication with geth (go-ethereum) node.",
+	"license": "MIT",
+	"type": "library",
+	"require": {
+		"php": ">= 5.6.0",
+		"nette/utils": "^2.4",
+		"guzzlehttp/guzzle": "^6.2"
+	},
+	"require-dev": {
+		"nette/tester": "@dev",
+		"mockery/mockery": "@dev"
+	},
+	"autoload": {
+		"psr-4": {
+			"Achse\\GethJsonRpcPhpClient\\": "src/"
+		},
+		"classmap": [
+			"src/JsonRpc/exceptions.php"
+		]
+	}
+}

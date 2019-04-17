@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TREZOR Sign Transaction Test</title>
+    <script>
+
+     function trezorSignTx() {
+        
+        var inputs = [
+            // {
+            //     address_n: [49 | 0x80000000, 1 | 0x80000000, 0 | 0x80000000, 0, 1], // 0,3
+            //     prev_index: 0,
+            //     prev_hash: "a1372e6d56cf3d2a0665c3022d7ba7ef04cd269eed880d3815dc3ebcd7f11a30",
+            //     amount: 1000,
+            //     script_type: 'SPENDP2SHWITNESS'
+            // },
+            {
+                address_n: [44 | 0x80000000, 1 | 0x80000000, 0 | 0x80000000, 0, 1],
+                prev_index: 0,
+                prev_hash: "78dbd0d19ccf8776ac590225cde5797e439959d05b91ecdbacd7c244afb28542"
+            }
+        ];
+
+        //"n4QXymrR72kgCDTbgchGNJmV8befFxX6Sx"
+        // send to 1 OP_RETURN output and one change output
+        // the rest will be used as fee
+        var outputs = [
+            // {
+            //     address_n: [49 | 0x80000000, 1 | 0x80000000, 0 | 0x80000000, 1, 0],
+            //     amount: 1000,
+            //     script_type: 'PAYTOP2SHWITNESS'
+            // }, 
+            {
+                address_n: [44 | 0x80000000, 1 | 0x80000000, 0 | 0x80000000, 1, 0],
+                amount: 36500,
+                script_type: 'PAYTOADDRESS'
+            }, 
+            {
+                amount: 0, // amount has to be 0 in OP_RETURN, but it has to be present
+                script_type: 'PAYTOOPRETURN',
+                op_return_data: 'deadbeef' // in hexadecimal
+            }
+        ];
+
+        TrezorConnect.signTx(inputs, outputs, function (response) {
+            if (response.success) {
+                console.log('Serialized TX:', response.serialized_tx); // tx in hex
+                console.log('Signatures:', response.signatures); // array of signatures, in hex
+            } else {
+                console.error('Error:', response.error); // error message
+            }
+            document.getElementById("response").innerHTML = JSON.stringify(response, undefined, 2);
+        });
+     }
+
+    </script>
+  </head>
+  <body>
+
+    <button onclick="trezorSignTx()">Sign</button>
+
+    <pre id="response"></pre>
+
+    <script src="../connect.js"></script>
+
+  </body>
+</html>

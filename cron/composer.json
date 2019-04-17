@@ -1,0 +1,6 @@
+{
+	"require": {
+		"omnipay/omnipay": "2.3.2",
+		"achse/geth-jsonrpc-php-client": "^2.0"
+	}
+}

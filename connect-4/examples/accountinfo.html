@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TREZOR Get account info</title>
+    <script>
+    
+    // Predefined xpub are taken from device loaded with seed account#1:
+    // alcohol woman abuse must during monitor noble actual mixed trade anger aisle
+    var backends = { };
+    backends['Bitcoin'] = {
+        path: "m/49'/0'/0'",
+        xpub: "xpub6DExuxjQ16sWy5TF4KkLV65YGqCJ5pyv7Ej7d9yJNAXz7C1M9intqszXfaNZG99KsDJdQ29wUKBTZHZFXUaPbKTZ5Z6f4yowNvAQ8fEJw2G"
+    };
+    backends['Bitcoin Cash'] = {
+        path: "m/44'/145'/0'",
+        xpub: "xpub6CAgnVoFsaZ3iMaW4jmUpvCvduYGEF1b2g5PQjBQ6oWWyqEpufNRMBN1b4MQaWubnGAnTBt1pEQSwAUaFxNz8B6Ct8fq5s6RYhshNMYK4uk"
+    }
+    backends['Litecoin'] = {
+        path: "m/49'/2'/0'",
+        xpub: "Ltub2Z4jpCH28E2PzUxcKrAf7dtkRVJc2CtKBcb6F46kkVHUTiMeSBAAHvZ5SxAVCGgUXsHPNN6tig79P6frgVCixL3ZdBzEqmiLZdzc27JrwT8"
+    };
+    backends['Dash'] = {
+        path: "m/44'/5'/0'",
+        xpub: "drkpRywR124kcbPosMejUj1JLQqZwQaxDMKvS7siuP9wBNsPAVzaSHAvTmbYfhdtXtsfN6Rgj2v6m1gb28Xd3Hx3nDZrsuZB6sPZL4mS7VHBHew"
+    }
+    backends['Zcash'] = {
+        path: "m/44'/133'/0'",
+        xpub: "xpub6BswZtAuSYus2zqBgxxVZNd7FBxYZsoeVKzksuCEjASGkHNPcyTfeK7oY8XNxbdUvVDUzyCTgDPUvQW8bKZH5DCdn2GTQSMM3b9QDpqRGSK"
+    }
+    backends['Testnet'] = {
+        path: "m/49'/1'/0'",
+        xpub: "tpubDDfS76c9NLz6v8CxwsCBi6YFcW463axCZpc3FR26othehmeXowmSBJ6TVPYYqhkekpivwRgkvdHgy8bCp5eHrqu33bGanQQH2qnVbPLUJEh"
+    }
+
+    function trezorGetAccountInfo(elementID) {
+
+        var coin = document.getElementById('coin').value;
+        var element = document.getElementById(elementID);
+        var description;
+        if (elementID === 'account_index2') {
+            description = {
+                account_index: element.value,
+                account_type: 'legacy' // segwit
+            }
+        } else {
+            description = element.value;
+        }
+
+        // description = "m/44'/0'/2'"; // third Bitcoin account 
+                                         // (note that names on connect start with Account 1, which has index 0)
+
+        // description = [44 | 0x80000000,
+        //                    0  | 0x80000000,
+        //                    2  | 0x80000000 ]; // same, in raw form
+
+        // description = 2 // third Bitcoin account
+        // description = "2" // can also be input as string
+
+        // Altcoin with specified xpub
+        // description = {
+        //     account_index: 2,
+        //     account_type: 'legacy'
+        // }
+
+        // description = null // will start account discovery and let user select
+
+        // description = "xpub6D1weXBcFAo8CqBbpP4TbH5sxQH8ZkqC5pDEvJ95rNNBZC9zrKmZP2fXMuve7ZRBe18pWQQsGg68jkq24mZchHwYENd8cCiSb71u3KD4AFH" 
+        // if specified by xpub, it has to be of one of the first 10 accounts
+        // this one is from test account, specified here
+        // https://github.com/satoshilabs/slips/blob/master/slip-0014.md
+
+        TrezorConnect.setCurrency(coin);
+        TrezorConnect.getAccountInfo(description, function (response) {
+            if (response.success) {
+                console.log('Account ID: ', response.id);
+                console.log('Account path: ', response.path);
+                console.log('Serialized account path: ', response.serializedPath);
+                console.log('Xpub', response.xpub);
+
+                console.log('Fresh address (first unused address): ', response.freshAddress);
+                console.log('Fresh address ID: ', response.freshAddressId);
+                console.log('Fresh address path: ', response.freshAddressPath);
+                console.log('Serialized fresh address path: ', response.serializedFreshAddressPath);
+
+                console.log('Balance in satoshis (including unconfirmed):', response.balance);
+                console.log('Balance in satoshis (only confirmed):', response.confirmed);
+            } else {
+                console.error('Error:', response.error); // error message
+            }
+            document.getElementById("response").innerHTML = JSON.stringify(response, undefined, 2);
+        });
+    }
+
+    function handleCoinChange() {
+        var coin = document.getElementById('coin').value;
+        document.getElementById('account_path').value = backends[coin].path;
+        document.getElementById('account_xpub').value = backends[coin].xpub;
+    }
+
+    </script>
+  </head>
+  <body>
+
+    Coin:
+    <select id="coin" onchange="handleCoinChange()">
+        <option selected>Bitcoin</option>
+        <option>Bitcoin Cash</option>
+        <option>Litecoin</option>
+        <option>Dash</option>
+        <option>Zcash</option>
+        <option>Testnet</option>
+    </select>
+
+    <hr />
+
+    <select id="account_index">
+        <option value="0">Account #1</option>
+        <option value="1">Account #2</option>
+        <option value="2">Account #3</option>
+        <option value="3">Account #4</option>
+        <option value="4">Account #5</option>
+        <option value="5">Account #6</option>
+        <option value="6">Account #7</option>
+        <option value="7">Account #8</option>
+        <option value="8">Account #9</option>
+        <option value="9">Account #10</option>
+    </select>
+    <br/>
+    <button onclick="trezorGetAccountInfo('account_index')">Get account info using index</button>
+
+    <hr />
+
+    <input id="account_path" type="text" value="m/49'/0'/0'" />
+    <br />
+    <button onclick="trezorGetAccountInfo('account_path')">Get account info using path</button>
+    <hr />
+
+    <input id="account_xpub" type="text" size="130" value="xpub6D1weXBcFAo8CqBbpP4TbH5sxQH8ZkqC5pDEvJ95rNNBZC9zrKmZP2fXMuve7ZRBe18pWQQsGg68jkq24mZchHwYENd8cCiSb71u3KD4AFH" />
+    <br />
+    <button onclick="trezorGetAccountInfo('account_xpub')">Get account info using xpub</button>
+
+    <pre id="response"></pre>
+
+    <script src="../connect.js?v3"></script>
+
+  </body>
+</html>

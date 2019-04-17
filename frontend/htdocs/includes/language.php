@@ -1,0 +1,12 @@
+<?php
+session_start();
+include('includes/db.config.php');
+if(isset($_SESSION['LANG']))
+{
+	$_SESSION['LANG']=$_SESSION['LANG'];
+}
+else
+{
+	$_SESSION['LANG']='en';
+}
+?>

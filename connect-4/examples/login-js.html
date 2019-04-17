@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TREZOR Login Test</title>
+    <script>
+
+     function trezorLogin() {
+         // site icon, optional. at least 48x48px
+         var hosticon = 'https://doc.satoshilabs.com/trezor-apps/_images/copay_logo.png';
+
+         // server-side generated and randomized challenges
+         var challenge_hidden = '';
+         var challenge_visual = '';
+
+         TrezorConnect.requestLogin(hosticon, challenge_hidden, challenge_visual, function (response) {
+             if (response.success) {
+                 console.log('Public key:', response.public_key); // pubkey in hex
+                 console.log('Signature:', response.signature); // signature in hex
+                 console.log('Version 2:', response.version === 2); // version field
+             } else {
+                 console.error('Error:', response.error);
+             }
+             document.getElementById("response").innerHTML = JSON.stringify(response, undefined, 2);
+         });
+     }
+
+    </script>
+  </head>
+  <body>
+
+    <button onclick="trezorLogin()">Sign In</button>
+
+    <pre id="response"></pre>
+
+    <script src="../connect.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,6 @@
+{
+	"require": {
+		"ps/image-optimizer": "1.0.6",
+		"achse/geth-jsonrpc-php-client": "^2.0"
+	}
+}

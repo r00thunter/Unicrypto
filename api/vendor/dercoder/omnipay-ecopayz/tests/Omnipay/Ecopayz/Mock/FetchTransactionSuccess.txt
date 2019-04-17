@@ -1,0 +1,12 @@
+HTTP/1.1 200 OK
+Server: nginx/1.6.0
+Date: Mon, 06 Oct 2014 09:07:53 GMT
+Content-Type: text/xml; charset=utf-8
+Connection: keep-alive
+Keep-Alive: timeout=60
+Cache-Control: private, max-age=0
+X-AspNet-Version: 4.0.30319
+X-Powered-By: ASP.NET
+P3P: CP="NOI ADM DEV PSAi COM NAV OUR OTR STP IND DEM
+
+<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><QueryByCustomerTransactionIDResponse xmlns="http://www.ecocard.com/merchantAPI/"><TransactionResponse><ErrorCode>0</ErrorCode><Message>OK</Message><TxID>2064</TxID><SVSTxID>1865010000008316336</SVSTxID><Amount>791</Amount><MerchantAccountNumber>110355</MerchantAccountNumber><ClientAccountNumber>1100185585</ClientAccountNumber><Currency>EUR</Currency><TransactionType>Payout</TransactionType><ProcessingTime>2014-10-02T13:33:25.587</ProcessingTime></TransactionResponse></QueryByCustomerTransactionIDResponse></soap:Body></soap:Envelope>

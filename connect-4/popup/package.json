@@ -1,0 +1,58 @@
+{
+  "name": "trezor-connect",
+  "version": "1.0.0",
+  "description": "High-level interface for TREZOR hardware wallet.",
+  "main": "popup.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/trezor/connect.git"
+  },
+  "author": "SatoshiLabs <http://satoshilabs.com>",
+  "license": "LGPL-3.0+",
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "es2015"
+          ],
+          "plugins": [
+            "transform-flow-strip-types",
+            "transform-class-properties",
+            "transform-object-rest-spread",
+            "add-module-exports"
+          ]
+        }
+      ]
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/trezor/connect/issues"
+  },
+  "homepage": "https://github.com/trezor/connect",
+  "dependencies": {
+    "bip32-utils": "^0.10.0",
+    "bip44-constants": "^3.0.0",
+    "bitcoinjs-lib-zcash": "^3.0.0",
+    "bowser": "^1.0.0",
+    "cb-insight": "^0.1.0",
+    "es6-promise": "^4.1.1",
+    "hd-wallet": "3.5.2",
+    "trezor.js": "^6.13.5",
+    "whatwg-fetch": "^0.11.0"
+  },
+  "devDependencies": {
+    "babel-plugin-add-module-exports": "^0.1.2",
+    "babel-plugin-transform-class-properties": "^6.4.0",
+    "babel-plugin-transform-flow-strip-types": "^6.4.0",
+    "babel-plugin-transform-object-rest-spread": "^6.3.13",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.3.13",
+    "babelify": "^7.2.0",
+    "browserify": "^13.1.1",
+    "exorcist": "^0.4.0",
+    "uglifyify": "^3.0.1",
+    "watchify": "^3.6.0"
+  }
+}

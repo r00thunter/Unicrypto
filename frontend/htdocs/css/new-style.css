@@ -1,0 +1,624 @@
+.new-login-otr{
+    display: table;
+position: absolute;
+height: 100%;
+width: 100%;
+}
+.new-login-otr .login-inner{
+height: 100%;
+}
+.new-login-otr .header-bar{
+height: 70px;
+color: #FFFFFF;
+background-color: #0667D0;
+padding:0;
+display: inline-block;
+width: 100%;
+}
+.new-login-otr .header-bar ul{
+    float: right;
+    list-style-type: none;
+    margin-top: 1.4em;
+    padding-left: 0;
+}
+/*@media (max-width: 768px){
+    .dummy:after{
+        width: 20% !important;
+    height: 1px !important;
+    bottom: -5px !important;
+}
+}*/
+
+.new-login-otr .header-bar ul li{
+display: inline-block;
+padding:0 15px;
+}
+.new-login-otr .header-bar ul li a{
+text-transform: capitalize;
+color: #fff !important;
+text-decoration: none;
+}
+input:-webkit-autofill {
+-webkit-box-shadow: inset 0 0 0px 9999px white !important;
+}
+input,h1,h2,h3,h4,h5,h6{
+    font-family: "Avenir Next", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif !important;
+}
+body{
+margin:0;
+    font-family: "Avenir Next",-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;    background-color: #F4F7FA;
+        background-color: #F4F7FA;
+}
+@font-face {
+    font-family: 'Avenir Next';
+    font-weight: 100;
+    src: url(../css/fonts/AvenirNext-UltraLight.woff) format('woff');
+    }
+
+    @font-face {
+    font-family: 'Avenir Next';
+    font-weight: 200;
+    src: url(../css/fonts/AvenirNext-Thin.woff) format('woff');
+    }
+
+    @font-face {
+    font-family: 'Avenir Next';
+    font-weight: 300;
+    src: url(../css/fonts/AvenirNext-Light.woff) format('woff');
+    }
+
+    @font-face {
+    font-family: 'Avenir Next';
+    font-weight: 400;
+    src: url(../css/fonts/AvenirNext-Regular.woff) format('woff');
+    }
+
+    @font-face {
+    font-family: 'Avenir Next';
+    font-weight: 500;
+    src: url(../css/fonts/AvenirNext-Medium.woff) format('woff');
+    }
+
+    @font-face {
+    font-family: 'Avenir Next';
+    font-weight: 600;
+    src: url(../css/fonts/AvenirNext-Demi.woff) format('woff');
+    }
+
+    @font-face {
+    font-family: 'Avenir Next';
+    font-weight: 700;
+    src: url(../css/fonts/AvenirNext-Bold.woff) format('woff');
+    }
+
+    @font-face {
+    font-family: 'Avenir Next';
+    font-weight: 800;
+    src: url(../css/fonts/AvenirNext-Heavy.woff) format('woff');
+    }
+.slideIn-appear{opacity:0.01;transform:translateX(-10px);transition:all 0.25s ease;}.slideIn-appear.slideIn-appear-active{opacity:1;transform:translateX(0px);transition:all 0.25s ease;}.slideIn-leave{opacity:1;transition:all 0.25s ease;}.slideIn-leave.slideIn-leave-active{opacity:0.01;transition:all 0.25s ease;}
+.transitionFadeInOut-enter{opacity:0.01;}
+.transitionFadeInOut-enter.transitionFadeInOut-enter-active{opacity:1;transition:opacity 250ms ease-in;}
+.transitionFadeInOut-leave{opacity:1;}
+.transitionFadeInOut-leave.transitionFadeInOut-leave-active{opacity:0.01;transition:opacity 250ms ease-in;}
+.transitionFadeInOut-appear{opacity:0.01;}
+.transitionFadeInOut-appear.transitionFadeInOut-appear-active{opacity:1;transition:opacity 350ms ease-in;} 
+{
+/* apply a natural box layout model to all elements, but allowing components to change */
+}
+.new-login-otr .header-content{
+max-width: 420px;
+margin: 2.5cm auto 0;
+padding:1em 1em 2em;
+background: #fff;
+position: relative;
+box-shadow: inset -1px 0 0 #e0e6ed, inset 1px 0 0 #e0e6ed;
+}
+.new-login-otr .header-content:before{
+top: 1px;
+background-position: left top;
+ background: linear-gradient(-135deg, #dae1e9 3px, transparent 0), linear-gradient(135deg, #dae1e9 3px, transparent 0); 
+content: '';
+position: absolute;
+left: 0px;
+display: block;
+width: 100%;
+height: 6px;
+background-repeat: repeat-x;
+background-size: 6px 6px;
+}
+.new-login-otr .header-content:after {
+bottom: 0;
+background-position: left bottom;
+background: linear-gradient(-45deg, #F4F7FA 3px, transparent 0), linear-gradient(45deg, #F4F7FA 3px, transparent 0);
+content: '';
+position: absolute;
+left: 0px;
+display: block;
+width: 100%;
+height: 6px;
+background-repeat: repeat-x;
+background-size: 6px 6px;
+}
+.kZBVvC {
+position: relative;
+width: auto;
+margin: 0px;
+border-radius: 4px;
+font-weight: 600;
+color: #FFFFFF;
+cursor: pointer;
+padding: 15px 25px;
+font-size: 18px;
+border: 1px solid #2E7BC4;
+background-color: #3C90DF;
+border: 1px solid #2E7BC4;
+background-color: #3C90DF;
+ font-family: "Avenir Next",-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+ width: 100%;
+}
+.header-content .form-control{
+width: 100%;
+box-shadow: none;
+border: 1px solid #ddd;
+padding: 10px;
+border-radius: 3px;
+background: none;
+font-size: 18px;
+font-weight: 500;
+color: #4E5C6E;
+ font-family: "Avenir Next",-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;    background-color: #F4F7FA;
+        background-color: #F4F7FA;
+}
+.header-content .form-group{
+margin: 20px;
+}
+.new-login-otr .header-content .form-group label{
+font-size: 14px;
+display: inline-block;
+margin: 0 0 10px;
+color: #aaa;
+}
+.header-content h2{
+text-align: center;
+font-weight: 500;
+}
+.header-content .header-content-inner p{
+margin: 0 20px;
+}
+.header-content .header-content-inner:before{
+    top: 0;
+background-position: left top;
+background: linear-gradient(-135deg, #F4F7FA 3px, transparent 0), linear-gradient(135deg, #F4F7FA 3px, transparent 0);
+content: '';
+position: absolute;
+left: 0px;
+display: block;
+width: 100%;
+height: 6px;
+background-repeat: repeat-x;
+background-size: 6px 6px;
+}
+
+.header-content .header-content-inner:after{
+bottom: 2px;
+background-position: left bottom;
+background: linear-gradient(-45deg, #dae1e9 3px, transparent 0), linear-gradient(45deg, #dae1e9 3px, transparent 0);
+content: '';
+position: absolute;
+left: 0px;
+display: block;
+width: 100%;
+height: 6px;
+background-repeat: repeat-x;
+background-size: 6px 6px;
+}
+@media (max-width: 400px){
+.new-login-otr .header-bar ul{
+    white-space: nowrap;
+}
+}
+.navigation {
+list-style: none;
+margin: 0;
+background-color: #0667D0;
+display: -webkit-box;
+display: -moz-box;
+display: -ms-flexbox;
+display: -webkit-flex;
+display: flex;
+-webkit-flex-flow: row wrap;
+justify-content: flex-end;
+}
+
+.navigation a {
+text-decoration: none;
+display: block;
+padding: 1em;
+color: white;
+}
+
+
+@media all and (max-width: 800px) {
+.navigation {
+justify-content: space-around;
+}
+}
+@media all and (max-width: 600px) {
+.navigation {
+-webkit-flex-flow: column wrap;
+flex-flow: column wrap;
+padding: 0;
+}
+
+.navigation a {
+text-align: center;
+padding: 10px;
+border-top: 1px solid rgba(255, 255, 255, 0.3);
+border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.navigation li:last-of-type a {
+border-bottom: none;
+}
+}
+.gzmQji {
+width: 32px;
+height: 32px;
+border-radius: 50%;
+background-color: #FFFFFF;
+
+}
+.jMrxtq {
+margin-left: 8px;
+margin-right: 6px;
+font-size: 14px;
+font-weight: 500;
+color: #FFFFFF;
+}
+.fQHoSi {
+width: 10px;
+height: 6px;
+margin-top: 2px;
+fill: #FFFFFF;
+opacity: 0.5;
+}
+.dropdown {
+position: relative;
+display: inline-block;
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #ffff;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+padding: 12px 16px;
+z-index: 1;
+border-radius: 4px;
+}
+.dropdown span span{
+position: relative;
+top: -11px;
+left: 5px;
+}
+.dropdown-content p{
+margin:0 ;
+color: #000;
+}
+.dropdown:hover .dropdown-content {
+display: block;
+}
+.crypto-accunt .header-bar{
+padding-right: 2em;
+}
+.crypto-accunt .nav-listing{
+    border-bottom: 1px solid #DAE1E9;
+    background: #fff;
+}
+.crypto-accunt .nav-listing ul li{
+list-style-type: none;
+margin-left: 30px;
+display: inline-block;
+
+} 
+.crypto-accunt .nav-listing ul li a{
+color: #7D95B6;
+font-weight: 500;
+}
+.crypto-accunt .nav-listing ul{
+    margin: 0 1em;
+padding: 1em;
+} 
+.form-group{
+position: relative;
+
+} 
+.profile-otr .form-group
+{
+    width: 50%;
+float: left;
+padding:0 15px;
+}
+.profile-otr .form_button{
+    display: inline-block;
+    width: 100%;
+}
+.form-control{
+    border: 1px solid #DAE1E9;
+width: 100%;
+height: 50px;
+padding: 10px;
+outline: none;
+border-radius: 4px;
+background-color: #fff;
+font-size: 16px;
+font-family: "Avenir Next", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+font-weight: 400;
+}
+.input-caption{
+bottom: 12px;
+position: absolute;
+right: 10px;
+color: grey;
+}
+.cont {
+display: block;
+position: relative;
+padding-left: 35px;
+margin-bottom: 12px;
+cursor: pointer;
+font-size: 15px;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+label.cont:last-child{
+margin-bottom: 25px;
+}
+/* Hide the browser's default checkbox */
+.cont input {
+position: absolute;
+opacity: 0;
+cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+position: absolute;
+top: 0;
+left: 0;
+height: 25px;
+width: 25px;
+background-color: #eee;
+border-radius: 2px;
+}
+
+/* On mouse-over, add a grey background color */
+.cont:hover input ~ .checkmark {
+background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.cont input:checked ~ .checkmark {
+    background-color: #2f3340;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+content: "";
+position: absolute;
+display: none;
+}
+
+/* Show the checkmark when checked */
+.cont input:checked ~ .checkmark:after {
+display: block;
+}
+
+/* Style the checkmark/indicator */
+.cont .checkmark:after {
+left: 8px;
+top: 4px;
+width: 8px;
+height: 14px;
+border: solid white;
+border-width: 0 3px 3px 0;
+-webkit-transform: rotate(45deg);
+-ms-transform: rotate(45deg);
+transform: rotate(45deg);
+}
+.Trade__Preview-ftIHSO.kkSOOR.Flex__Flex-fVJVYW.iDqRrV .bskbTZ{
+    margin-bottom: 0;
+}
+.calc.dotted .pull-right,
+.current-otr .pull-right{
+float: right;
+}
+.current-otr p{
+margin: 5px 0;
+}
+.calc.dotted{
+border-bottom: 1px dashed #0667D0;
+margin-bottom: 20px;
+}
+.m-b-15{
+margin-bottom: 20px;
+}
+.m-t-15{
+    margin-top: 15px;
+}
+.table-otr{
+    padding:10px;
+    height: 406px;
+    overflow-y: auto;
+    width: 100%;
+}
+.table-otr table {
+    border-collapse: collapse;
+    width: 100%;
+    border-top: none;
+}
+
+.table-otr td,.table-otr  th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 10px;
+}
+
+.table-otr tr:nth-child(even) {
+    background-color: #f4f6f8;
+}
+body::-webkit-scrollbar{
+  width: 8px;
+}
+
+.table-otr::-webkit-scrollbar,
+.ICfmD::-webkit-scrollbar,
+.AccountList__AccountsList-eEZOms.jZdQTT::-webkit-scrollbar,
+.table-style::-webkit-scrollbar,
+.Flex__Flex-fVJVYW.iJJJTg::-webkit-scrollbar,
+.cHdqpn::-webkit-scrollbar,
+.fEfrBY::-webkit-scrollbar {
+  width: 6px;
+}
+body::-webkit-scrollbar-thumb, 
+.table-otr::-webkit-scrollbar-thumb,
+.ICfmD::-webkit-scrollbar-thumb,
+.AccountList__AccountsList-eEZOms.jZdQTT::-webkit-scrollbar-thumb,
+.table-style::-webkit-scrollbar-thumb,
+.Flex__Flex-fVJVYW.iJJJTg::-webkit-scrollbar-thumb,
+.cHdqpn::-webkit-scrollbar-thumb,
+.fEfrBY::-webkit-scrollbar-thumb{
+  background: #666;
+  border-radius: 0;
+}
+
+body::-webkit-scrollbar-track,
+.table-otr::-webkit-scrollbar-track,
+.ICfmD::-webkit-scrollbar-track,
+.AccountList__AccountsList-eEZOms.jZdQTT::-webkit-scrollbar-track,
+.table-style::-webkit-scrollbar-track,
+.Flex__Flex-fVJVYW.iJJJTg::-webkit-scrollbar-track,
+.cHdqpn::-webkit-scrollbar-track,
+.fEfrBY::-webkit-scrollbar-track {
+  background: #ddd;
+  border-radius: 0;
+  background-clip: content-box;
+}
+.Button__Container-hQftQV.kZBVvC{
+    width: 100%;
+    margin: 1em 0;
+    padding: 10px;
+    opacity: 1;
+}
+.modal,.modal-new {
+display: none; /* Hidden by default */
+position: fixed; /* Stay in place */
+z-index: 999; /* Sit on top */
+padding-top: 50px; /* Location of the box */
+left: 0;
+top: 0;
+width: 100%; /* Full width */
+height: 100%; /* Full height */
+overflow: auto; /* Enable scroll if needed */
+background-color: rgb(0,0,0); /* Fallback color */
+background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal .form-control,
+.modal-new .form-control{
+    height: 40px;
+}
+.modal .bskbTZ,
+.modal-new .bskbTZ{
+    margin-bottom: 15px !important;
+}
+/* Modal Content */
+.modal-content,.modal-content-new {
+background-color: #fefefe;
+margin: auto;
+padding: 20px;
+border: 1px solid #888;
+max-width: 500px;
+}
+
+/* The Close Button */
+.close, .closenew {
+color: #aaaaaa;
+float: right;
+font-size: 28px;
+}
+
+.close:hover,
+.close:focus,
+.closenew:hover, .closenew:hover {
+color: #000;
+text-decoration: none;
+cursor: pointer;
+}
+.errors{
+   list-style-type: none;
+    background: #fbcfcf;
+    padding: 15px;
+    border-radius: 3px;
+    position: absolute;
+    right: 20px;
+    font-size: 14px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    z-index: 999;
+}
+.messages{
+   list-style-type: none;
+    background: #DFFBE4;
+    padding: 15px;
+    border-radius: 3px;
+    position: absolute;
+    right: 20px;
+    font-size: 14px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    z-index: 999;
+}
+.Navbar__LinkContent-fFVkWH{
+        color: #2f3340 !important;
+}
+.message-box-wrap
+{
+    list-style-type: none;
+    background: #fbcfcf;
+    padding: 15px;
+    border-radius: 3px;
+    position: absolute;
+    right: 20px;
+    font-size: 14px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    z-index: 999;
+    display: inline-block;
+    max-width: 500px;
+}
+.banner {
+    padding: 4em 0;
+    background: #373c48;
+    min-height: 206px;
+}
+
+.banner .content {
+    z-index: 9;
+}
+.banner h1 {
+    text-align: center;
+    font-size: 1.8em;
+    color: #f4ba2f;
+    margin: .5rem  0!important;
+}
+.fWgtDL {
+height: auto !important;
+color: #FFFFFF;
+background-color: #2f3340;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+.Footer__NeedHelp-kNHURG.gkzfZl .guwUit{
+        border: 1px solid #f4ba2f !important;
+    background-color: #f4ba2f !important;
+}
